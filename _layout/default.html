@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+      <meta charset="UTF-8">
+          <title>{{ page.title }} | {{ site.title }}</title>
+              <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+                </head>
+                  <body>
+                      <header>
+                            <h1>{{ site.title }}</h1>
+                                  <p>{{ site.description }}</p>
+                                      </header>
+
+                                          <main>
+                                                {{ content }}
+                                                    </main>
+
+                                                        <footer>
+                                                              <hr>
+                                                                    <p>&copy; {{ site.time | date: "%Y" }} {{ site.author.name }}. Todos los derechos reservados.</p>
+                                                                          <p><a href="mailto:{{ site.email }}">Contacto</a></p>
+                                                                              </footer>
+                                                                                </body>
+                                                                                </html>
+                                                                                
