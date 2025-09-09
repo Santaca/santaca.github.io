@@ -1,6 +1,9 @@
 - name: Home
   link: /
+  icon: https://fontawesome.com/icons/house?f=classic&s=solid
 - name: About
   link: /about
-- name: test
-  link: /prueba
+  icon: https://fontawesome.com/icons/house?f=classic&s=solid
+- name: Projects
+  link: /projects
+  icon: https://fontawesome.com/icons/house?f=classic&s=solid

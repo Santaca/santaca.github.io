@@ -1,0 +1,19 @@
+- title: Proyecto 1
+  description: Este es el primer proyecto.
+  url: /proyectos/proyecto-1/
+  image: /assets/img/proyecto1.jpg
+
+- title: Proyecto 2
+  description: Este es el segundo proyecto.
+  url: /proyectos/proyecto-2/
+  image: /assets/img/proyecto2.jpg
+
+- title: Proyecto 3
+  description: Este es el tercer proyecto.
+  url: /proyectos/proyecto-3/
+  image: /assets/img/proyecto3.jpg
+
+- title: Proyecto 4
+  description: Otro proyecto más.
+  url: /proyectos/proyecto-4/
+  image: /assets/img/proyecto4.jpg
