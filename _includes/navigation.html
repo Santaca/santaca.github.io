@@ -1,44 +1,42 @@
-  <!-- 🔹 Barra de navegación -->
+<nav id="navbar" class="navbar navbar-expand-lg navbar-light fixed-top mx-5">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="{{ '/' | relative_url }}">
+      <img src="/assets/img/logo.jpg" alt="Logo" width="60" height="60" class="align-middle">
+      <span class="align-middle">POP!Panorama</span>
+    </a>
 
-  <nav id="navbar" class="navbar navbar-expand-lg navbar-light fixed-top mx-5">
-    <div class="container-fluid">
-      <!-- Marca / Logo -->
-      <a class="navbar-brand" href="{{ '/' | relative_url }}">POP!Panorama
-        <img src="/assets/img/logo.jpg" alt="Logo" width="60" height="60" class="d-inline-block align-text-top">
-      </a>
-      
-      <!-- Botón hamburguesa (móvil) -->
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+    <!-- Botón hamburguesa (móvil) -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-      <!-- Links -->
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          {% for item in site.data.navigation %}
-          <li class="nav-item">
-            <a class="nav-link" href={{ item.link }}>{{ item.name }}</a>
-          </li>
-          {% endfor %}
-        </ul>
-      </div>
+    <!-- Links -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        {% for item in site.data.navigation %}
+        <li class="nav-item">
+          <a class="nav-link" href={{ item.link }}>{{ item.name }}</a>
+        </li>
+        {% endfor %}
+      </ul>
     </div>
-  </nav>
+  </div>
+</nav>
 
-  <script>
+<script>
   const elemento = document.getElementById('navbar');
-  const mediaQuery = window.matchMedia('(max-width: 1036px)');
+  const mediaQuery = window.matchMedia('(max-width: 1150px)');
 
-function actualizarClase(e) {
-  if (e.matches) {
-    elemento.classList.remove('navbar-light', 'fixed-top', 'mx-5');
-  } else {
-    elemento.classList.add('navbar-light', 'fixed-top', 'mx-5');
+  function actualizarClase(e) {
+    if (e.matches) {
+      elemento.classList.remove('navbar-light', 'fixed-top', 'mx-5');
+    } else {
+      elemento.classList.add('navbar-light', 'fixed-top', 'mx-5');
+    }
   }
-}
 
-// Se ejecuta al cargar y al redimensionar
-actualizarClase(mediaQuery);
-mediaQuery.addEventListener('change', actualizarClase);
+  // Se ejecuta al cargar y al redimensionar
+  actualizarClase(mediaQuery);
+  mediaQuery.addEventListener('change', actualizarClase);
 </script>
