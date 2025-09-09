@@ -5,16 +5,16 @@ layout: default
 {% assign project = site.data.projects | where: "name", slug | first %}
 
 <style>
-    body.fade {
+    #pr-body.fade {
         opacity: 0;
         transition: opacity 1s ease-in-out;
     }
-    body.fade.show {
+    #pr-body.fade.show {
         opacity: 1;
     }
 </style>
 
-<body class="fade">
+<body class="fade" id="pr-body">
 <a href="/projects" class="link-underline-opacity-0">
   <i class="bi bi-arrow-left"></i> Go back
 </a>
@@ -32,7 +32,7 @@ layout: default
 
   <script>
     window.addEventListener('load', () => {
-        document.body.classList.add('show');
+        document.getElementById("pr-body").classList.add('fade', 'show');
     })
   </script>
 

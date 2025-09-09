@@ -1,15 +1,126 @@
 ---
-title: Home
 layout: default
-
 ---
+
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Home</title>
-  </head>
-  <body>
-    <h1>{{ "Hello World!" | downcase }}</h1>
-  </body>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title }}</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    header {
+      background: url('/assets/img/portada.jpg') no-repeat center center;
+      background-size: cover;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-shadow: 1px 1px 6px rgba(0,0,0,0.7);
+    }
+    header h1 {
+      font-size: 4rem;
+    }
+    section {
+      padding: 60px 0;
+    }
+    h2 {
+      color: #2c3e50;
+      margin-bottom: 40px;
+    }
+    .card {
+      border: none;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    .card img {
+      border-top-left-radius: 12px;
+      border-top-right-radius: 12px;
+    }
+    footer {
+      background-color: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Header / Hero -->
+<header class="text-center">
+  <div class="container">
+    <h1>Innovación en Impresión 3D y Arquitectura Paramétrica</h1>
+    <p class="lead mt-3">Transformamos ideas complejas en realidades tangibles</p>
+  </div>
+</header>
+
+<!-- Sobre Nosotros -->
+<section id="sobre-nosotros" class="bg-white">
+  <div class="container">
+    <h2 class="text-center">Sobre Nosotros</h2>
+    <p class="text-center">Somos un estudio especializado en diseño paramétrico y fabricación aditiva. Combinamos la creatividad, la tecnología y la precisión de la impresión 3D para desarrollar proyectos arquitectónicos innovadores. Nuestro enfoque se basa en la experimentación, la eficiencia y la estética funcional.</p>
+  </div>
+</section>
+
+<!-- Servicios -->
+<section id="servicios">
+  <div class="container">
+    <h2 class="text-center">Servicios</h2>
+    <div class="row text-center">
+      <div class="col-md-4 mb-4">
+        <div class="card p-3">
+          <img src="/assets/img/servicio1.jpeg" class="card-img-top" alt="Diseño Paramétrico">
+          <div class="card-body">
+            <h5 class="card-title">Diseño Paramétrico</h5>
+            <p class="card-text">Creación de modelos arquitectónicos con algoritmos y parámetros variables que permiten soluciones personalizadas y adaptativas.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card p-3">
+          <img src="/assets/img/servicio2.jpeg" class="card-img-top" alt="Prototipado Rápido">
+          <div class="card-body">
+            <h5 class="card-title">Prototipado Rápido</h5>
+            <p class="card-text">Fabricación de maquetas y componentes precisos mediante impresión 3D de alta resolución para materializar ideas complejas.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card p-3">
+          <img src="/assets/img/servicio3.jpeg" class="card-img-top" alt="Consultoría">
+          <div class="card-body">
+            <h5 class="card-title">Consultoría</h5>
+            <p class="card-text">Asesoramiento para integrar tecnología digital en proyectos arquitectónicos, optimizando procesos y resultados estéticos y funcionales.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Proyectos -->
+<section id="proyectos" class="bg-light">
+  <div class="container">
+    <h2 class="text-center">Proyectos Destacados</h2>
+    <div class="row g-4">
+      <div class="col-md-6">
+        <img src="/assets/img/project1.jpeg" class="img-fluid rounded" alt="Proyecto 1">
+      </div>
+      <div class="col-md-6">
+        <img src="/assets/img/project1.jpeg" class="img-fluid rounded" alt="Proyecto 2">
+      </div>
+    </div>
+    <p class="mt-4 text-center">Cada proyecto refleja nuestro compromiso con la innovación y la capacidad de transformar ideas digitales en estructuras físicas únicas.</p>
+  </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>
