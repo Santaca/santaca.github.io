@@ -1,5 +1,6 @@
   <!-- 🔹 Barra de navegación -->
-  <nav class="navbar navbar-expand-lg navbar-light fixed-top mx-5">
+
+  <nav id="navbar" class="navbar navbar-expand-lg navbar-light fixed-top mx-5">
     <div class="container-fluid">
       <!-- Marca / Logo -->
       <a class="navbar-brand" href="{{ '/' | relative_url }}">POP!Panorama
@@ -24,3 +25,24 @@
       </div>
     </div>
   </nav>
+
+  <script>
+  const elemento = document.getElementById('navbar');
+  const mediaQuery = window.matchMedia('(max-width: 1036px)');
+
+function actualizarClase(e) {
+  if (e.matches) {
+    elemento.classList.add('bg-secondary', 'navbar-dark');
+    elemento.classList.remove('mx-5');
+    elemento.classList.remove('navbar-light');
+  } else {
+    elemento.classList.remove('bg-secondary');
+    elemento.classList.remove('navbar-dark');
+    elemento.classList.add('navbar-light');
+  }
+}
+
+// Se ejecuta al cargar y al redimensionar
+actualizarClase(mediaQuery);
+mediaQuery.addEventListener('change', actualizarClase);
+</script>
