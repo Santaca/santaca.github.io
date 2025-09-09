@@ -32,13 +32,9 @@
 
 function actualizarClase(e) {
   if (e.matches) {
-    elemento.classList.add('bg-secondary', 'navbar-dark');
-    elemento.classList.remove('mx-5');
-    elemento.classList.remove('navbar-light');
+    elemento.classList.remove('navbar-light', 'fixed-top', 'mx-5');
   } else {
-    elemento.classList.remove('bg-secondary');
-    elemento.classList.remove('navbar-dark');
-    elemento.classList.add('navbar-light');
+    elemento.classList.add('navbar-light', 'fixed-top', 'mx-5');
   }
 }
 
