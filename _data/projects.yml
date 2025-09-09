@@ -1,7 +1,8 @@
 - title: Proyecto 1
+  name: project1
   description: Este es el primer proyecto.
-  url: /proyectos/proyecto-1/
-  image: /assets/img/proyecto1.jpg
+  url: /projects/project1
+  image: /assets/img/project1.jpeg
 
 - title: Proyecto 2
   description: Este es el segundo proyecto.

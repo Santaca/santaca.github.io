@@ -1,0 +1,39 @@
+---
+layout: default
+---
+{% assign slug = page.url | split: '/' | last %}
+{% assign project = site.data.projects | where: "name", slug | first %}
+
+<style>
+    body.fade {
+        opacity: 0;
+        transition: opacity 1s ease-in-out;
+    }
+    body.fade.show {
+        opacity: 1;
+    }
+</style>
+
+<body class="fade">
+<a href="/projects" class="link-underline-opacity-0">
+  <i class="bi bi-arrow-left"></i> Go back
+</a>
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-md-8">
+        <img src="{{ project.image }}" alt="{{ project.name }}" class="img-fluid">
+      </div>
+      <div class="col-md-4">
+        <h2>{{ project.title | capitalize }}</h2>
+        <p>{{ project.description }}</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    window.addEventListener('load', () => {
+        document.body.classList.add('show');
+    })
+  </script>
+
+</body>
